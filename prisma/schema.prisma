@@ -49,6 +49,8 @@ model Vote {
   score String @default("1-0")
 
   createdAt DateTime? @default(now())
+
+  @@unique([userId, gameId])
 }
 
 model Game {
